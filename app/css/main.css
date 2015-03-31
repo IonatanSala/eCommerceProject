@@ -5,12 +5,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
 	
 }
 
 p, li {
 	font-family: 'Roboto', 'Helvetica-Neue';
 }
+
+
 
 html, body {
 	height: 100%;
@@ -182,7 +185,7 @@ section.landing div.jumbotron div {
 	align-items: center;
 }
 section.landing div.jumbotron div h2, section.landing div.jumbotron div h3 {
-
+	font-family: 'Roboto Slab', 'Helvetica-Neue';
 	color: #fff;
 	font-size: 3.5em;
 	text-transform: uppercase;
@@ -191,6 +194,7 @@ section.landing div.jumbotron div h2, section.landing div.jumbotron div h3 {
 }
 
 section.landing div.jumbotron div button {
+	font-family: 'Roboto Slab', 'Helvetica-Neue';
 	margin-top: 20px;
 	width: 250px;
 	height: 65px;
@@ -207,6 +211,7 @@ section.landing div.jumbotron div button {
 
 section.landing div.jumbotron div button:hover {
 	border: 2px solid HSLA(0, 69%, 59%, 1);
+	color: #ddd;
 	
 }
 
