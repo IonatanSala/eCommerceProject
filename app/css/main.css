@@ -105,7 +105,7 @@ nav.navbar .nav-content {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 222px;
+	width: 250px;
 	height: 64px;
 	display: flex;
 	justify-content: flex-end;
@@ -116,6 +116,7 @@ nav.navbar .nav-content {
 
 .icon-search {
 	cursor: pointer;
+	
 	width: 25px;
 	height: 25px;
 	margin-left: 10px;
@@ -129,6 +130,7 @@ nav.navbar .nav-content {
 }*/
 
 input.search-container {
+	/*display: none;*/
 	/*border-radius: 2px;*/
 	background-color: #eee;
 	color: #444444;
@@ -136,7 +138,8 @@ input.search-container {
 	margin: 0;
 	border: 0;
 	border-radius: 5px;
-	height: 25px;
+	height: 32px;
+	width: 220px;
 	
 }
 
@@ -163,11 +166,48 @@ section.landing div.jumbotron {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
     ), url('../img/landing.jpeg') center center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.landing div.jumbotron div {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+section.landing div.jumbotron div h2, section.landing div.jumbotron div h3 {
+
+	color: #fff;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	line-height: .85em;
+	text-align: center;
+}
+
+section.landing div.jumbotron div button {
+	margin-top: 20px;
+	width: 250px;
+	height: 65px;
+	border: 2px solid HSLA(0, 0%, 100%, 1);
+	border-radius: 4px;
+	background-color: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	transition: all .3s ease;
+	outline: 0;
+}
+
+section.landing div.jumbotron div button:hover {
+	border: 2px solid HSLA(0, 69%, 59%, 1);
+	
 }
 
 
