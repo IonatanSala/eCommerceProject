@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				expand: true,
 				flatten: true,
 				src: 'app/css/*.css',
-				dest: 'app/css/'
+				dest: 'app/css/mini'
 			}
 		}
 	});
