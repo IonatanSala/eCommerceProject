@@ -1,20 +1,27 @@
 /**********************************
 		BASIC STYLING
 **********************************/
-
-
 * {
 	-moz-box-sizing: border-box;
 	     box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+
+	
 }
+
+p, li {
+	font-family: 'Roboto', 'Helvetica-Neue';
+}
+
+
 
 html, body {
 	height: 100%;
 	width: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -24,7 +31,7 @@ a {
 }
 
 ul {
-	list-style: none;''
+	list-style: none;
 }
 
 /**********************************
@@ -33,17 +40,41 @@ ul {
 
 
 header.nav-header {
-	width: 100%;
 	position: fixed;
-	top: 0;
-	/*box-shadow: 0 6px 4px -4px #999;*/
+	top:0;
+	background-color: HSLA(0, 100%, 100%, 0.9);
+	border-top: 4px solid HSLA(0, 69%, 59%, 1);
 	border-bottom: 1px solid black;
+	width: 100%;
+	box-shadow: 0px .5px 3px 0px rgba(0, 0, 0, 0.75);
+	/*position: fixed;
+	top: 0;*/
+	/*box-shadow: 0 6px 4px -4px #999;*/
 }
+
+header.nav-header header.top {
+	height: 90px;
+	width: 100%;
+}
+
+header.nav-header header.top div {
+	
+}
+
+header.nav-header header.top div h2 {
+	color: #000;
+	padding-top: 30px;
+	text-align: center;
+}
+
+header.nav-header header.top div h2 a:hover > span {
+	color: HSLA(0, 58%, 51%, 1);
+}
+
 
 nav.navbar {
 	width: 100%;
 	height: 64px;
-	background: HSLA(0, 0%, 0%, 0.8);
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -82,25 +113,38 @@ nav.navbar .nav-content {
 	   -moz-box-pack: start;
 	    -ms-flex-pack: start;
 	        justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-left: 100px ;
 }
 
 .nav-content li {
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: bold;
 	padding-right: 24px;
+	font-size: .9em;
 	-webkit-transition: all 0.2s ease;
 	        transition: all 0.2s ease;
 }
 
 .nav-content li:hover {
-	color: HSLA(0, 57%, 50%, 1);
+	color: HSLA(0, 69%, 59%, 1);
+}
+
+.nav-content li.logo img {
+	margin-left: -50px;
+	margin-right: 100px;
+	width: 50px;
+	/*height: 50px;*/
 }
 
 .icon-search-container {
-	cursor: pointer;
-	background-color: HSLA(0, 70%, 55%, .9);
+	/*cursor: pointer;*/
+	/*background-color: HSLA(0, 70%, 55%, .9);*/
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -116,7 +160,7 @@ nav.navbar .nav-content {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	width: 100px;
+	width: 250px;
 	height: 64px;
 	display: flex;
 	-webkit-box-pack: end;
@@ -124,21 +168,44 @@ nav.navbar .nav-content {
 	   -moz-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	border-left: 1px solid black;
+	border-right: 0;
 	-webkit-transition: all .2s ease;
 	        transition: all .2s ease;
+
 }
 
-.icon-search-container .icon-search {
-	width: 40px;
-	height: 40px;
-	margin-right: 25px;
+.icon-search {
+	cursor: pointer;
+	
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+
 
 	/*border-left: 1px solid black;*/
 }
 
-.icon-search-container:hover {
+/*.icon-search-container:hover {
 	background-color: HSLA(0, 80%, 58%, 1);
+}*/
+
+input.search-container {
+	/*display: none;*/
+	/*border-radius: 2px;*/
+	background-color: #eee;
+	color: #444444;
+	padding-left: 10px;
+	margin: 0;
+	border: 0;
+	border-radius: 5px;
+	height: 32px;
+	width: 220px;
+	
+}
+
+input:focus {
+	outline: 0;
+	/*border: 2px solid #900;*/
 }
 
 
@@ -153,6 +220,47 @@ section.landing {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	width: 100%;
+	height: 100%;
+}
+
+section.landing div.jumbotron {
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/landing.jpeg') center center;
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), url('../img/landing.jpeg') center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+section.landing div.jumbotron div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	   -moz-box-pack: center;
@@ -163,19 +271,88 @@ section.landing {
 	   -moz-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	width: 100%;
-	height: 100%;
+}
+section.landing div.jumbotron div h2, section.landing div.jumbotron div h3 {
+	font-family: 'Roboto Slab', 'Helvetica-Neue';
+	color: #fff;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	line-height: 1em;
+	text-align: center;
 }
 
-section.landing div.jumbotron {
-	width: 100%;
-	height: 100%;
-	background:  rgba(0,0,0,0.8) url('http://cdn3.dualshockers.com/wp-content/uploads/2014/06/BB_KyeArt_A_257295_14023645371.jpg?eaa32f') center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+section.landing div.jumbotron div button {
+	font-family: 'Roboto Slab', 'Helvetica-Neue';
+	margin-top: 20px;
+	width: 250px;
+	height: 65px;
+	border: 2px solid HSLA(0, 0%, 100%, 1);
+	border-radius: 4px;
+	background-color: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	-webkit-transition: all .3s ease;
+	        transition: all .3s ease;
+	outline: 0;
+}
+
+section.landing div.jumbotron div button:hover {
+	border: 2px solid HSLA(0, 69%, 59%, 1);
+	color: HSLA(0, 69%, 59%, 1);
+	
 }
 
 
+/**********************************
+			FEATURED
+**********************************/
+
+
+section.featured {
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+section.featured div.item-section-divider  {
+	width: 80%;
+	height: 100px;
+	/*border-top: 1px solid black;*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+section.featured div.item-section-divider h2 {
+	text-transform: uppercase;
+	position: relative;
+	top: -3rem;
+	display: inline-block;
+}
 
 
 
